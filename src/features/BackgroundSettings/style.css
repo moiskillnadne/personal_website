@@ -1,0 +1,17 @@
+.background-settings-card {
+  margin: 20px;
+
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.background-settings-preview {
+  height: 150px;
+  width: 250px;
+  border-radius: 12px;
+}
+
+.preview-filter {
+  backdrop-filter: blur(15px);
+}

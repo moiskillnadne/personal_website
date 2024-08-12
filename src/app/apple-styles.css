@@ -1,0 +1,53 @@
+/* Basic button styling */
+.button-apple-style {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+  border: none; /* No border */
+  border-radius: 12px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  color: #fff ; /* White text color */
+  text-align: center; /* Center text */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+              0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  transition: background 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+/* Hover effect */
+.button-apple-style:hover {
+  background: rgba(255, 255, 255, 0.3); /* Slightly less transparent on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 
+              0 3px 4px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow on hover */
+}
+
+/* Active effect */
+.button-apple-style:active {
+  background: rgba(255, 255, 255, 0.4); /* Even less transparent when active */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 
+              0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow when active */
+}
+
+/* Card container styling */
+.card-apple-style {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+  border-radius: 12px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+              0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  transition: background 0.3s, box-shadow 0.3s; /* Smooth transition */
+  backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background */
+  margin: 20px; /* Margin around the card */
+}
+
+/* Hover effect */
+.card-apple-style_hover {
+  background: rgba(255, 255, 255, 0.3); /* Slightly less transparent on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 
+              0 3px 4px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow on hover */
+}
+
+/* Active effect */
+.card-apple-style_active {
+  background: rgba(255, 255, 255, 0.4); /* Even less transparent when active */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 
+              0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow when active */
+}

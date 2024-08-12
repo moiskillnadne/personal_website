@@ -1,0 +1,41 @@
+.base-font-regular {
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.base-font-medium {
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.base-font-light {
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.base-font-h1 {
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.base-font-h3 {
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.base-font-h4 {
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+}

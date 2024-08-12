@@ -1,0 +1,7 @@
+.exteral-link {
+  transition: all 0.2s;
+}
+
+.exteral-link:hover {
+  transform: scale(1.1);
+}

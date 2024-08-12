@@ -1,0 +1,19 @@
+header {
+  display: grid;
+  grid-auto-flow: column;
+
+  padding: 16px;
+}
+
+.header-back-button {
+  justify-self: flex-start;
+}
+
+.header-appearance-button {
+  justify-self: flex-end;
+}
+
+.header-title {
+  justify-self: center;
+  align-self: center;
+}
