@@ -5,11 +5,11 @@ header {
   padding: 16px;
 }
 
-.header-back-button {
+.header-left-button {
   justify-self: flex-start;
 }
 
-.header-appearance-button {
+.header-right-button {
   justify-self: flex-end;
 }
 

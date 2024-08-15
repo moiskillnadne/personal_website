@@ -6,5 +6,9 @@ export const ROUTES = {
   APPEARANCE: {
     path: '/appearance',
     name: 'Appearance',
+  },
+  VPN: {
+    path: '/vpn',
+    name: 'VPN',
   }
 }

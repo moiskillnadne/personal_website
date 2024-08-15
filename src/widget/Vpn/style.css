@@ -1,0 +1,80 @@
+.vpn-widget-root {
+  transition: all 0.3s;
+}
+
+.vpn-widget-root button {
+  transition: all 0.3s;
+}
+
+.want-vpn-wrapper-default {
+  transition: all 0.7s;
+  transition-delay: 0.35s;
+}
+
+.vpn-widget-root #vpn-close-icon {
+  transition: all 0.7s;
+}
+
+.want-vpn-wrapper-default-open {
+  transform: translateY(-150px);
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-1 {
+  opacity: 1;
+}
+
+.number-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #FFF;
+}
+
+.number-step {
+  font-size: 20px;
+  color: #FFF;
+  cursor: default;
+}
+
+.link-between-steps {
+  width: 2px;
+  background-color: #FFF;
+  margin-left: 25px;
+}
+
+.height-0 {
+  height: 0;
+}
+
+.height-60 {
+  height: 60px;
+}
+
+.step-1 {
+  transition: all 0.7s;
+  transition-delay: 0.5s;
+}
+
+.link-1-2 {
+  transition: all 0.4s;
+  transition-delay: 0.5s;
+}
+
+.step-2 {
+  transition: all 0.6s;
+  transition-delay: 0.7s;
+}
+
+.link-2-3 {
+  transition: all 0.4s;
+  transition-delay: 0.7s;
+}
+
+.step-3 {
+  transition: all 0.4s;
+  transition-delay: 0.9s;
+}

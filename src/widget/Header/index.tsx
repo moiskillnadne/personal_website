@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom'
-import { ROUTES } from '../../shared/constants/ROUTES'
+import { ROUTES } from '~/shared/constants/ROUTES'
 import './style.css'
 
 export const Header = () => {
@@ -9,17 +9,21 @@ export const Header = () => {
 
   const isHomePage = location.pathname === ROUTES.HOME.path
 
-  const routeSettings = Object.values(ROUTES).find((route) => route.path === location.pathname)
+  const isVpnPage = location.pathname === ROUTES.VPN.path
 
   const onBack = () => {
     navigate(-1)
   }
 
+  const onVpn = () => {
+    navigate(ROUTES.VPN.path)
+  }
+
   return (
     <header>
-      {!isHomePage && <button type='button' className='button-apple-style header-back-button font-bold' onClick={onBack}>Back</button>}
+      {!isHomePage && <button type='button' className='button-apple-style header-left-button font-bold' onClick={onBack}>Back</button>}
 
-      {!isHomePage && routeSettings && <h2 className='header-title'>{routeSettings.name}</h2>}
+      {!isVpnPage && <button type='button' className='button-apple-style header-right-button font-bold' onClick={onVpn}>VPN</button>}
     </header>
   )
 }
