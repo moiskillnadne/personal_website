@@ -26,6 +26,9 @@ jobs:
       - name: Corepack enable
         run: corepack enable
 
+      - name: Set up Yarn version
+        run: corepack prepare yarn@4.4.1 --activate
+
       - name: Check yarn version
         run: yarn --version
 
