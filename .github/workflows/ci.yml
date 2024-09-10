@@ -1,0 +1,41 @@
+name: CI
+
+on: [pull_request]
+
+env:
+  NODE_VERSION: 20.12.2
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/node_modules
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Corepack enable
+        run: corepack enable
+
+      - name: Set up Yarn version
+        run: corepack prepare yarn@4.4.1 --activate
+
+      - name: Check yarn version
+        run: yarn --version
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Run ESLint
+        run: yarn lint
