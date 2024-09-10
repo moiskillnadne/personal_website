@@ -3,6 +3,8 @@ import { ROUTES } from '~/shared/constants/ROUTES'
 import './style.css'
 
 export const Header = () => {
+  const isVpnFeatureEnabled = false // Hardcoded feature flag. In real world, this should be fetched from a feature flag service
+
   const location = useLocation()
 
   const navigate = useNavigate()
@@ -23,7 +25,7 @@ export const Header = () => {
     <header>
       {!isHomePage && <button type='button' className='button-apple-style header-left-button font-bold' onClick={onBack}>Back</button>}
 
-      {!isVpnPage && <button type='button' className='button-apple-style header-right-button font-bold' onClick={onVpn}>VPN</button>}
+      {!isVpnPage && isVpnFeatureEnabled && <button type='button' className='button-apple-style header-right-button font-bold' onClick={onVpn}>VPN</button>}
     </header>
   )
 }
