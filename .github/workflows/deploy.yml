@@ -18,6 +18,10 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
+      - name: Add SSH config
+        run: |
+          echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+
       - name: Deploy to VPS
         run: |
           ssh -o StrictHostKeyChecking=no root@139.162.144.245 'sh /root/bash/github_actions/riabkovcom/deploy.sh'
