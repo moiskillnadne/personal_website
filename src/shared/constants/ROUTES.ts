@@ -10,5 +10,5 @@ export const ROUTES = {
   VPN: {
     path: '/vpn',
     name: 'VPN',
-  }
-}
+  },
+};

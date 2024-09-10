@@ -6,8 +6,7 @@ export const THEME = {
 
       black: '#000',
       black50: 'rgba(0, 0, 0, 0.5)',
-
     },
   },
   dark: {},
-}
+};

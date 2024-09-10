@@ -1,23 +1,24 @@
 type Props = {
-  src: string
+  src: string;
 
-  width?: string
-  height?: string
+  width?: string;
+  height?: string;
 
-  borderRadius?: string
+  borderRadius?: string;
 
-  alt?: string
-}
+  alt?: string;
+};
 
 function Image(props: Props) {
   return (
-    <img 
-      src={props.src} 
-      alt={props.alt} 
-      width={props.width} 
-      height={props.height} 
-      style={{ borderRadius: props.borderRadius }}/>
-  )
+    <img
+      src={props.src}
+      alt={props.alt}
+      width={props.width}
+      height={props.height}
+      style={{ borderRadius: props.borderRadius }}
+    />
+  );
 }
 
-export default Image
+export default Image;

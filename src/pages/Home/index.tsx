@@ -1,7 +1,7 @@
-import { ProfileWidget } from "~/widget/Profile"
+import { ProfileWidget } from '~/widget/Profile';
 
 const HomePage = () => {
-  return <ProfileWidget />
-}
+  return <ProfileWidget />;
+};
 
-export default HomePage
+export default HomePage;

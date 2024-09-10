@@ -1,13 +1,12 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
+import HomePage from '~/pages/Home';
+import VpnPage from '~/pages/Vpn';
 
-import HomePage from '~/pages/Home'
-import VpnPage from '~/pages/Vpn'
+import { AppearanceBackground } from './AppearanceBackground';
 
-import { AppearanceBackground } from './AppearanceBackground'
-
-import { ROUTES } from '~/shared/constants/ROUTES'
-import { Layout } from './Layout'
+import { ROUTES } from '~/shared/constants/ROUTES';
+import { Layout } from './Layout';
 
 const router = createBrowserRouter([
   {
@@ -15,20 +14,19 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: ROUTES.HOME.path, element: <HomePage /> },
-      { path: ROUTES.VPN.path, element: <VpnPage /> }
-    ]
+      { path: ROUTES.VPN.path, element: <VpnPage /> },
+    ],
   },
-])
+]);
 
-export const DEFAULT_BG_IMAGE = 'https://picsum.photos/id/327/1280/720'
+export const DEFAULT_BG_IMAGE = 'https://picsum.photos/id/327/1280/720';
 
 function App() {
-
   return (
     <AppearanceBackground imageUrl={DEFAULT_BG_IMAGE}>
       <RouterProvider router={router} />
     </AppearanceBackground>
-  )
+  );
 }
 
-export default App
+export default App;

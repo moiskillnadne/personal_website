@@ -1,8 +1,7 @@
-import { Outlet } from "react-router-dom"
-import { Header } from "../widget/Header"
+import { Outlet } from 'react-router-dom';
+import { Header } from '../widget/Header';
 
 export const Layout = () => {
-
   return (
     <div id="app-layout">
       <Header />
@@ -10,5 +9,5 @@ export const Layout = () => {
         <Outlet />
       </div>
     </div>
-  )
-}
+  );
+};

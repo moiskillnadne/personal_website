@@ -1,8 +1,7 @@
-import { VpnWidget } from "~/widget/Vpn"
+import { VpnWidget } from '~/widget/Vpn';
 
 const VpnPage = () => {
+  return <VpnWidget />;
+};
 
-  return <VpnWidget />
-}
-
-export default VpnPage
+export default VpnPage;

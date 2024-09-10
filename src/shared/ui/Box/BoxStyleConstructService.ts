@@ -1,101 +1,106 @@
-export type Display = 'flex' | 'block'
+export type Display = 'flex' | 'block';
 
-export type JustifyContent = 'center' | 'flex-start' | 'flex-end' | 'space-between' | 'space-around'
+export type JustifyContent =
+  | 'center'
+  | 'flex-start'
+  | 'flex-end'
+  | 'space-between'
+  | 'space-around';
 
-export type AlignItems = 'center' | 'flex-start' | 'flex-end'
+export type AlignItems = 'center' | 'flex-start' | 'flex-end';
 
-export type FlexDirection = 'row' | 'column'
+export type FlexDirection = 'row' | 'column';
 
 type Input = {
-  display?: Display
-  justifyContent?: JustifyContent
-  alignItems?: AlignItems
-  flexDirection?: FlexDirection
-  className?: string
-}
+  display?: Display;
+  justifyContent?: JustifyContent;
+  alignItems?: AlignItems;
+  flexDirection?: FlexDirection;
+  className?: string;
+};
 
 export class BoxStyleConstructService {
   public static constuct(input: Input): string | undefined {
-    const classNames: string[] = []
+    const classNames: string[] = [];
 
-    if(input.className) {
-      classNames.push(input.className)
+    if (input.className) {
+      classNames.push(input.className);
     }
 
-    if(input.display) {
-      classNames.push(this.applyDisplayStyle(input.display))
+    if (input.display) {
+      classNames.push(this.applyDisplayStyle(input.display));
     }
 
-    if(input.justifyContent) {
-      classNames.push(this.applyJustifyContent(input.justifyContent))
+    if (input.justifyContent) {
+      classNames.push(this.applyJustifyContent(input.justifyContent));
     }
 
-    if(input.alignItems) {
-      classNames.push(this.applyAlignItems(input.alignItems))
+    if (input.alignItems) {
+      classNames.push(this.applyAlignItems(input.alignItems));
     }
 
-    if(input.flexDirection) {
-      classNames.push(this.applyFlexDirection(input.flexDirection))
+    if (input.flexDirection) {
+      classNames.push(this.applyFlexDirection(input.flexDirection));
     }
 
-    if(classNames.length === 0) return undefined
+    if (classNames.length === 0) return undefined;
 
-    return classNames.join(' ')
+    return classNames.join(' ');
   }
 
   private static applyDisplayStyle(displayType: Display): string {
     switch (displayType) {
       case 'flex':
-        return 'display-flex'
+        return 'display-flex';
       case 'block':
-        return 'display-block'
+        return 'display-block';
 
       default:
-        return 'display-block'
+        return 'display-block';
     }
   }
 
   private static applyJustifyContent(justifyContent: JustifyContent): string {
     switch (justifyContent) {
       case 'center':
-        return 'justify-center'
+        return 'justify-center';
       case 'flex-start':
-        return 'justify-start'
+        return 'justify-start';
       case 'flex-end':
-        return 'justify-end'
+        return 'justify-end';
       case 'space-between':
-        return 'justify-between'
+        return 'justify-between';
       case 'space-around':
-        return 'justify-around'
+        return 'justify-around';
 
       default:
-        return 'justify-center'
+        return 'justify-center';
     }
   }
 
   private static applyAlignItems(alignItems: AlignItems): string {
     switch (alignItems) {
       case 'center':
-        return 'align-center'
+        return 'align-center';
       case 'flex-start':
-        return 'align-start'
+        return 'align-start';
       case 'flex-end':
-        return 'align-end'
+        return 'align-end';
 
       default:
-        return 'align-center'
+        return 'align-center';
     }
   }
 
   private static applyFlexDirection(flexDirection: FlexDirection): string {
     switch (flexDirection) {
       case 'row':
-        return 'flex-direction-row'
+        return 'flex-direction-row';
       case 'column':
-        return 'flex-direction-column'
+        return 'flex-direction-column';
 
       default:
-        return 'flex-direction-row'
+        return 'flex-direction-row';
     }
   }
 }
