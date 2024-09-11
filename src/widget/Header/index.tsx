@@ -3,7 +3,7 @@ import { ROUTES } from '~/shared/constants/ROUTES';
 import './style.css';
 
 export const Header = () => {
-  const isVpnFeatureEnabled = true; // Hardcoded feature flag. In real world, this should be fetched from a feature flag service
+  const isVpnFeatureEnabled = false; // Hardcoded feature flag. In real world, this should be fetched from a feature flag service
 
   const location = useLocation();
 
