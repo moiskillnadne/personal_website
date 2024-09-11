@@ -1,6 +1,5 @@
 import './style.css';
 
-import Box from '~/shared/ui/Box';
 import { VpnSvgClose } from './Icons/VpnSvgClose';
 import { useState } from 'react';
 import { Steps } from './Steps';
@@ -13,21 +12,10 @@ export const VpnWidget = () => {
   };
 
   return (
-    <Box
-      display="flex"
-      flex={1}
-      justifyContent="center"
-      alignItems="center"
-      className="vpn-widget-root"
-      flexDirection="column"
-    >
-      <Box display="flex" flexDirection="column">
-        <Box
-          display="flex"
-          flexDirection="column"
-          gap="16px"
-          alignItems="center"
-          className={`want-vpn-wrapper-default ${isOpen ? 'want-vpn-wrapper-default-open' : ''}`}
+    <div className="vpn-widget-root flex flex-1 justify-center items-center flex-col">
+      <div className="flex flex-col">
+        <div
+          className={`want-vpn-wrapper-default ${isOpen ? 'want-vpn-wrapper-default-open' : ''} flex flex-col gap-[16px] items-center`}
         >
           <VpnSvgClose width={isOpen ? '80px' : '178px'} height={isOpen ? '80px' : '178px'} />
           <button
@@ -40,8 +28,8 @@ export const VpnWidget = () => {
           </button>
 
           <Steps isOpen={isOpen} />
-        </Box>
-      </Box>
-    </Box>
+        </div>
+      </div>
+    </div>
   );
 };

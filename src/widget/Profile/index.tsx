@@ -14,7 +14,7 @@ export const ProfileWidget = () => {
   const navigator = useNavigate();
 
   return (
-    <div id="profile-widget" className="flex flex-1 justify-center items-center">
+    <div className="flex flex-1 justify-center items-center">
       <div>
         <div className="flex flex-col items-center">
           <Image src={ProfilePhoto} alt="profile" width="128px" height="128px" borderRadius="50%" />

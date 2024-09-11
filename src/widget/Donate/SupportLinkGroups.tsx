@@ -1,4 +1,4 @@
-import { Box, Typography } from '~/shared/ui';
+import { Typography } from '~/shared/ui';
 import { SupportLinkGroup } from './types';
 import { LinkCard } from './LinkCard';
 
@@ -8,14 +8,14 @@ type Props = {
 
 export const SupportLinkGroups = ({ group }: Props) => {
   return (
-    <Box>
+    <div>
       <Typography value={group.title} size="xl" />
 
-      <Box display="flex" gap="16px">
+      <div className="flex gap-[16px]">
         {group.links.map((link) => {
           return <LinkCard key={link.url} link={link} />;
         })}
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 };
