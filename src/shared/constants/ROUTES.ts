@@ -11,8 +11,8 @@ export const ROUTES = {
     path: '/vpn',
     name: 'VPN',
   },
-  SUPPORT: {
-    path: '/support',
-    name: 'Support',
+  DONATE: {
+    path: '/donate',
+    name: 'Donate',
   },
 };

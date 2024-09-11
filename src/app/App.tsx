@@ -2,7 +2,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import HomePage from '~/pages/Home';
 import VpnPage from '~/pages/Vpn';
-import { SupportPage } from '~/pages/Support';
+import { DonatePage } from '~/pages/Donate';
 
 import { AppearanceBackground } from './AppearanceBackground';
 
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     children: [
       { path: ROUTES.HOME.path, element: <HomePage /> },
       { path: ROUTES.VPN.path, element: <VpnPage /> },
-      { path: ROUTES.SUPPORT.path, element: <SupportPage /> },
+      { path: ROUTES.DONATE.path, element: <DonatePage /> },
     ],
   },
 ]);
