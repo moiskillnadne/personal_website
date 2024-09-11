@@ -20,13 +20,11 @@ export const ProfileWidget = () => {
           <Image src={ProfilePhoto} alt="profile" width="128px" height="128px" borderRadius="50%" />
 
           <Typography value="Viktor Riabkov" size="4xl" weight="bold" />
-          <Typography
-            value="Senior Full Stack Engineer"
-            size="md"
-            // color={THEME.light.color.white50}
-          />
+          <div className="opacity-50">
+            <Typography value="Senior Full Stack Engineer" size="md" />
+          </div>
 
-          <div className="flex gap-[12px] py-[16px] px-[8px]">
+          <div className="flex gap-[12px] py-[16px] px-[8px] items-center">
             <a
               href={EXTERNAL_LINKS.Youtube}
               target="_blank"
