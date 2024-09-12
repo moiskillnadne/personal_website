@@ -1,3 +1,2 @@
 export { default as Image } from './Image';
-export { default as Text } from './Text';
-export { default as Box } from './Box';
+export { default as Typography } from './Typography';

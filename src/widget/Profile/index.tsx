@@ -1,29 +1,30 @@
 import './style.css';
 
-import { Image, Text, Box } from '~/shared/ui';
-import { THEME } from '~/shared/constants/THEME';
+import { useNavigate } from 'react-router-dom';
+import { Image, Typography } from '~/shared/ui';
 
 import ProfilePhoto from '~/assets/img/profilePhoto.png';
 import TelegramIcon from '~/assets/img/telegram.svg';
 import LinkedInIcon from '~/assets/img/linkedin.svg';
 import YoutubeIcon from '~/assets/img/youtube.svg';
 import { EXTERNAL_LINKS } from '~/shared/constants/LINKS';
+import { ROUTES } from '~/shared/constants/ROUTES';
 
 export const ProfileWidget = () => {
+  const navigator = useNavigate();
+
   return (
-    <Box id="profile-widget" display="flex" justifyContent="center" alignItems="center" flex={1}>
-      <Box>
-        <Box display="flex" flexDirection="column" alignItems="center">
+    <div className="flex flex-1 justify-center items-center">
+      <div>
+        <div className="flex flex-col items-center">
           <Image src={ProfilePhoto} alt="profile" width="128px" height="128px" borderRadius="50%" />
 
-          <Text value="Viktor Riabkov" variant="h1" />
-          <Text
-            value="Senior Full Stack Engineer"
-            variant="body-regular"
-            color={THEME.light.color.white50}
-          />
+          <Typography value="Viktor Riabkov" size="4xl" weight="bold" />
+          <div className="opacity-50">
+            <Typography value="Senior Full Stack Engineer" size="md" />
+          </div>
 
-          <Box display="flex" gap="12px" padding="16px 8px">
+          <div className="flex gap-[12px] py-[16px] px-[8px] items-center">
             <a
               href={EXTERNAL_LINKS.Youtube}
               target="_blank"
@@ -48,9 +49,19 @@ export const ProfileWidget = () => {
             >
               <Image src={LinkedInIcon} alt="linkedin-logo" width="24px" height="24px" />
             </a>
-          </Box>
-        </Box>
-      </Box>
-    </Box>
+          </div>
+        </div>
+
+        <div className="flex justify-center">
+          <button
+            type="button"
+            className="button-apple-style header-right-button font-bold"
+            onClick={() => navigator(ROUTES.DONATE.path)}
+          >
+            Donate
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };

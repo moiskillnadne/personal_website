@@ -1,65 +1,66 @@
-body,
-#root,
-#AppearanceBackground,
-#app-layout {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.app-content-template {
-  display: flex;
-  flex: 1;
-}
+@layer base {
+  @font-face {
+    font-family: 'SF Pro Display';
+    src: url('../assets/fonts/SFProDisplay/THIN_ITALIC.OTF') format('opentype');
+    font-style: italic;
+    font-weight: 100;
+  }
+  @font-face {
+    font-family: 'SF Pro Display';
+    src: url('../assets/fonts/SFProDisplay/ULTRALIGHT_ITALIC.OTF') format('opentype');
+    font-style: italic;
+    font-weight: 200;
+  }
+  @font-face {
+    font-family: 'SF Pro Display';
+    src: url('../assets/fonts/SFProDisplay/LIGHT_ITALIC.OTF') format('opentype');
+    font-style: italic;
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: 'SF Pro Display';
+    src: url('../assets/fonts/SFProDisplay/REGULAR.OTF') format('opentype');
+    font-style: normal;
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'SF Pro Display';
+    src: url('../assets/fonts/SFProDisplay/MEDIUM.OTF') format('opentype');
+    font-style: normal;
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: 'SF Pro Display';
+    src: url('../assets/fonts/SFProDisplay/SEMIBOLD_ITALIC.OTF') format('opentype');
+    font-style: italic;
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: 'SF Pro Display';
+    src: url('../assets/fonts/SFProDisplay/BOLD.OTF') format('opentype');
+    font-style: normal;
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'SF Pro Display';
+    src: url('../assets/fonts/SFProDisplay/BLACK_ITALIC.OTF') format('opentype');
+    font-style: italic;
+    font-weight: 900;
+  }
 
-body {
-  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  color: whitesmoke;
+  html, body {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: whitesmoke;
+  }
 }
 
 h1, h2, h3, h4, h5, h6, a, p, textarea {
   margin: 0;
   padding: 0;
-}
-
-.full {
-  width: 100%;
-  height: 100%;
-}
-
-.relative {
-  position: relative;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.left-0 {
-  left: 0;
-}
-
-.top-0 {
-  top: 0;
-}
-
-.font-light {
-  font-size: 16px;
-  font-weight: 300;
-
-}
-
-.font-medium {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.font-bold {
-  font-size: 16px;
-  font-weight: 700;
 }
 
 .layout-filters {
@@ -72,16 +73,4 @@ h1, h2, h3, h4, h5, h6, a, p, textarea {
 
 .content {
   z-index: 3;
-}
-
-.display-flex {
-  display: flex;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.align-center {
-  align-items: center;
 }

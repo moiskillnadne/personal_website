@@ -5,9 +5,9 @@ export const Layout = () => {
   const appVersion = import.meta.env.VITE_APP_VERSION;
 
   return (
-    <div id="app-layout">
+    <div id="app-layout" className="flex flex-col m-0 p-0 w-screen h-svh">
       <Header />
-      <div className="app-content-template">
+      <div className="flex flex-1">
         <Outlet />
       </div>
 
