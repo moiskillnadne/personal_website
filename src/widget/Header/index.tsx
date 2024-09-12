@@ -13,8 +13,8 @@ export const Header = () => {
 
   const isVpnPage = location.pathname === ROUTES.VPN.path;
 
-  const onBack = () => {
-    navigate(-1);
+  const onHomeClick = () => {
+    navigate(ROUTES.HOME.path);
   };
 
   const onVpn = () => {
@@ -27,9 +27,9 @@ export const Header = () => {
         <button
           type="button"
           className="button-apple-style header-left-button font-bold"
-          onClick={onBack}
+          onClick={onHomeClick}
         >
-          Back
+          Home
         </button>
       )}
 
