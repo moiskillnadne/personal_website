@@ -5,7 +5,7 @@ export const Layout = () => {
   const appVersion = import.meta.env.VITE_APP_VERSION;
 
   return (
-    <div id="app-layout" className="flex flex-col m-0 p-0 w-screen h-svh">
+    <div id="app-layout" className="flex flex-col m-0 p-0 w-screen h-svh overflow-scroll">
       <Header />
       <div className="flex flex-1">
         <Outlet />
