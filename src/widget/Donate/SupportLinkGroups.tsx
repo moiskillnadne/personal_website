@@ -8,10 +8,10 @@ type Props = {
 
 export const SupportLinkGroups = ({ group }: Props) => {
   return (
-    <div>
-      <Typography value={group.title} size="xl" />
+    <div className="text-center">
+      <Typography value={group.title} size="xl" weight="semibold" />
 
-      <div className="flex gap-[16px]">
+      <div className="flex flex-col gap-[16px] mt-[12px] items-center">
         {group.links.map((link) => {
           return <LinkCard key={link.url} link={link} />;
         })}

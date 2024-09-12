@@ -26,11 +26,11 @@ export const PatreonLink: SupportLink = {
 };
 
 export const AllCards: SupportLinkGroup = {
-  title: 'Поддерживаются все карты',
+  title: 'Все карты',
   links: [BoostyLink, DonationAlertsLink, TelegramTributeLink],
 };
 
 export const InternationalCardsOnly: SupportLinkGroup = {
-  title: 'Поддерживаются только иностранный карты (Не РФ/РБ карты)',
+  title: 'Зарубежные карты (Не РФ/РБ карты)',
   links: [BuyMeACoffeeLink, PatreonLink],
 };

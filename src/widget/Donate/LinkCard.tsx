@@ -10,7 +10,10 @@ export const LinkCard = ({ link }: Props) => {
   };
 
   return (
-    <div onClick={onClick} className="clickable-card text-4xl font-bold underline">
+    <div
+      onClick={onClick}
+      className="clickable-card w-[250px] h-[100px] flex justify-center items-center text-[20px]"
+    >
       {link.title}
     </div>
   );
