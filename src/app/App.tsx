@@ -21,11 +21,9 @@ const router = createBrowserRouter([
   },
 ]);
 
-export const DEFAULT_BG_IMAGE = 'https://picsum.photos/id/327/1280/720';
-
 function App() {
   return (
-    <AppearanceBackground imageUrl={DEFAULT_BG_IMAGE}>
+    <AppearanceBackground>
       <RouterProvider router={router} />
     </AppearanceBackground>
   );
