@@ -17,7 +17,7 @@ export const TelegramTributeLink: SupportLink = {
 
 export const BuyMeACoffeeLink: SupportLink = {
   title: 'Buy Me a Coffee',
-  url: 'buymeacoffee.com/viktor_riabkov',
+  url: 'https://buymeacoffee.com/viktor_riabkov',
 };
 
 export const PatreonLink: SupportLink = {
