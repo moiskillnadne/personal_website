@@ -58,7 +58,7 @@ export const ProfileWidget = () => {
             className="button-apple-style header-right-button font-bold"
             onClick={() => navigator(ROUTES.DONATE.path)}
           >
-            Support
+            Donate
           </button>
         </div>
       </div>
