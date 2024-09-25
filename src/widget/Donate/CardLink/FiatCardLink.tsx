@@ -1,10 +1,10 @@
-import { SupportLink } from './types';
+import { FiatSupportLink } from '../types';
 
 type Props = {
-  link: SupportLink;
+  link: FiatSupportLink;
 };
 
-export const LinkCard = ({ link }: Props) => {
+export const FiatCardLink = ({ link }: Props) => {
   const onClick = () => {
     window.open(link.url, '_blank');
   };
