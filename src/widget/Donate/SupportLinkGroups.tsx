@@ -1,6 +1,6 @@
 import { Typography } from '~/shared/ui';
 import { SupportLinkGroup } from './types';
-import { CardLinkManager } from './CardLink';
+import { CardLink } from './CardLink';
 
 type Props = {
   group: SupportLinkGroup;
@@ -13,7 +13,7 @@ export const SupportLinkGroups = ({ group }: Props) => {
 
       <div className="flex flex-col gap-[16px] mt-[12px] items-center">
         {group.links.map((link, index) => {
-          return <CardLinkManager key={`${index}-${link.type}-${link.title}`} link={link} />;
+          return <CardLink key={`${index}-${link.type}-${link.title}`} link={link} />;
         })}
       </div>
     </div>

@@ -1,10 +1,10 @@
 import { Image, Typography } from '~/shared/ui';
 import SadHamster from '~/assets/img/sadhamster_circle.png';
 import { SupportLinksGrid } from './SupportLinksGrid';
-import { AllCards, InternationalCardsOnly } from './lib/constants';
+import { AllCards, CryptoTransfers, InternationalCardsOnly } from './lib/constants';
 
 export const DonateWidget = () => {
-  const linkGroups = [AllCards, InternationalCardsOnly];
+  const linkGroups = [AllCards, InternationalCardsOnly, CryptoTransfers];
 
   return (
     <div className="flex justify-center items-center flex-1">
