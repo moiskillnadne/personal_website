@@ -115,3 +115,67 @@
               0 1px 2px rgba(0, 0, 0, 0.1); /* Слегка уменьшенная тень при клике */
   transform: scale(0.98); /* Легкое уменьшение при клике */
 }
+
+/* Modal overlay */
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Полупрозрачный черный фон */
+  backdrop-filter: blur(5px); /* Эффект размытия */
+  display: flex;
+  align-items: flex-end; /* Выравнивание модального окна по нижней части */
+  justify-content: center;
+  z-index: 1000; /* Поверх всех элементов */
+  opacity: 0;
+  pointer-events: none; /* Отключаем клики, когда окно закрыто */
+  transition: opacity 0.3s ease; /* Плавный переход */
+
+  overflow: hidden;
+}
+
+/* Modal active state */
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Modal window */
+.modal-window {
+  background: rgba(255, 255, 255, 0.85); /* Полупрозрачный белый фон */
+  border-radius: 20px 20px 0 0; /* Скругленные углы сверху */
+  padding: 20px;
+  width: 100%;
+  max-width: 600px; /* Максимальная ширина для больших экранов */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+              0 1px 3px rgba(0, 0, 0, 0.08); /* Тень как в других элементах */
+  transform: translateY(100%); /* Начальная позиция за пределами экрана */
+  transition: transform 0.4s ease; /* Плавный выезд */
+}
+
+/* Modal active state */
+.modal-overlay.active .modal-window {
+  transform: translateY(0); /* Выровнять по низу экрана */
+}
+
+/* Close button inside the modal */
+.modal-close {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+              0 1px 3px rgba(0, 0, 0, 0.08); /* Легкая тень */
+  transition: background 0.3s ease;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.5);
+}

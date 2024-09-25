@@ -13,7 +13,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-    
       - name: Extract Tag
         id: extract_tag
         run: echo "RELEASE_TAG=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
@@ -29,6 +28,6 @@ jobs:
 
       - name: Deploy to VPS
         run: |
-          ssh -o StrictHostKeyChecking=no root@139.162.144.245 'export RELEASE_TAG=${{ env.RELEASE_TAG }} && sh /root/bash/github_actions/riabkovcom/deploy.sh'
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP}} 'export RELEASE_TAG=${{ env.RELEASE_TAG }} && sh ${{ secrets.PATH_TO_SCRIPT }}'
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
