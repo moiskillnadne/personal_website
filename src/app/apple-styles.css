@@ -118,7 +118,7 @@
 
 /* Modal overlay */
 .modal-overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -132,6 +132,8 @@
   opacity: 0;
   pointer-events: none; /* Отключаем клики, когда окно закрыто */
   transition: opacity 0.3s ease; /* Плавный переход */
+
+  overflow: hidden;
 }
 
 /* Modal active state */

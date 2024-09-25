@@ -7,7 +7,7 @@ export const DonateWidget = () => {
   const linkGroups = [AllCards, InternationalCardsOnly, CryptoTransfers];
 
   return (
-    <div className="flex justify-center items-center flex-1">
+    <div className="flex justify-center items-center flex-1 overflow-hidden">
       <div className="flex items-center flex-col">
         <div className="flex flex-col items-center">
           <Image src={SadHamster} alt="profile" width="200px" height="140px" borderRadius="50%" />

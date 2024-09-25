@@ -1,6 +1,10 @@
 import { CryptoSupportLink, FiatSupportLink, SupportLinkGroup } from '../types';
 
 import ToncoinQRCode from '~/assets/img/crypto_qrcodes/toncoin.jpeg';
+import USDTTRC from '~/assets/img/crypto_qrcodes/usdt_trc20.jpeg';
+import USDTBEP from '~/assets/img/crypto_qrcodes/usdt_bep20.jpeg';
+import Bitcoin from '~/assets/img/crypto_qrcodes/bitcoin.jpeg';
+import Eth from '~/assets/img/crypto_qrcodes/eth.jpeg';
 
 export const BoostyLink: FiatSupportLink = {
   type: 'fiat',
@@ -41,6 +45,42 @@ export const ToncoinAddress: CryptoSupportLink = {
   qrcode: ToncoinQRCode,
 };
 
+export const DollarTRCAddress: CryptoSupportLink = {
+  type: 'crypto',
+  title: 'USDT TRC20',
+  currency: 'USDT',
+  network: 'TRC20',
+  address: 'TAgrxeyF8CMHwoPhfr32F8e1evx4xaQHpL',
+  qrcode: USDTTRC,
+};
+
+export const DollarBEPAddress: CryptoSupportLink = {
+  type: 'crypto',
+  title: 'USDT BEP20',
+  currency: 'USDT',
+  network: 'BEP20',
+  address: '0x4dDFdafD3fa7e4ce5e188E911480fCBb8544DF40',
+  qrcode: USDTBEP,
+};
+
+export const BitcoinAddress: CryptoSupportLink = {
+  type: 'crypto',
+  title: 'Bitcoin',
+  currency: 'Bitcoin',
+  network: 'BTC',
+  address: 'bc1qcyxjsacz6rx2z3fn5jrnqpzk0rxt24j8h6st9n',
+  qrcode: Bitcoin,
+};
+
+export const EthAddress: CryptoSupportLink = {
+  type: 'crypto',
+  title: 'ETH',
+  currency: 'Ethereum',
+  network: 'Ethereum',
+  address: '0x4dDFdafD3fa7e4ce5e188E911480fCBb8544DF40',
+  qrcode: Eth,
+};
+
 export const AllCards: SupportLinkGroup = {
   title: 'Все карты',
   links: [BoostyLink, DonationAlertsLink, TelegramTributeLink],
@@ -53,5 +93,5 @@ export const InternationalCardsOnly: SupportLinkGroup = {
 
 export const CryptoTransfers: SupportLinkGroup = {
   title: 'Переводы в криптовалюте',
-  links: [ToncoinAddress],
+  links: [ToncoinAddress, DollarTRCAddress, DollarBEPAddress, BitcoinAddress, EthAddress],
 };
