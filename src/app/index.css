@@ -62,15 +62,3 @@ h1, h2, h3, h4, h5, h6, a, p, textarea {
   margin: 0;
   padding: 0;
 }
-
-.layout-filters {
-  z-index: 1;
-}
-
-.base-app-filter-blur {
-  backdrop-filter: blur(50px);
-}
-
-.content {
-  z-index: 3;
-}
