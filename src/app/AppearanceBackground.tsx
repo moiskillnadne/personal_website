@@ -32,9 +32,7 @@ export const AppearanceBackground = ({ children }: Props) => {
         </div>
       </div>
 
-      <div className="absolute left-0 top-0 w-screen h-svh content base-app-filter-blur">
-        {children}
-      </div>
+      <div className="absolute left-0 top-0 w-screen h-svh">{children}</div>
     </div>
   );
 };
