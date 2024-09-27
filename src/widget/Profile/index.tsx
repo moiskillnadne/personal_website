@@ -31,7 +31,7 @@ export const ProfileWidget = () => {
               className="exteral-link"
               rel="noreferrer"
             >
-              <Image src={YoutubeIcon} alt="youtube-logo" width="24px" height="24px" />
+              <Image src={YoutubeIcon} alt="youtube-logo" width="28px" height="28px" />
             </a>
             <a
               href={EXTERNAL_LINKS.Telegram}
@@ -39,7 +39,7 @@ export const ProfileWidget = () => {
               className="exteral-link"
               rel="noreferrer"
             >
-              <Image src={TelegramIcon} alt="telegram-logo" width="24px" height="24px" />
+              <Image src={TelegramIcon} alt="telegram-logo" width="28px" height="28px" />
             </a>
             <a
               href={EXTERNAL_LINKS.Linkedin}
@@ -47,7 +47,7 @@ export const ProfileWidget = () => {
               className="exteral-link"
               rel="noreferrer"
             >
-              <Image src={LinkedInIcon} alt="linkedin-logo" width="24px" height="24px" />
+              <Image src={LinkedInIcon} alt="linkedin-logo" width="28px" height="28px" />
             </a>
           </div>
         </div>
